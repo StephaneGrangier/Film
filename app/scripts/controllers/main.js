@@ -14,4 +14,8 @@ angular.module('filmApp')
       'AngularJS',
       'Karma'
     ];
+	
+	$scope.monClick = function(){
+		$scope.awesomeThings.push('Stephane');
+	}
   });
