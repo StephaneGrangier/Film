@@ -7,25 +7,35 @@
   <p><a class="btn btn-lg btn-success" ng-href="#/" ng-click="monClick()">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
 </div>
 
-<div>
-{{awesomeThings}}
+<p>Ajouter un film
+  <input type="texte" ng-model="nouveauFilm" />
+  <a class="btn btn-lg btn-success" ng-href="#/" ng-click="monClick()">ajouter<span class="glyphicon glyphicon-ok"></span></a>
+</p>
+
+<p>Afficher
+  <input type="number" ng-model="nbAffiche" />  <!-- permet de définir le nb d'élément à afficher-->
+  elements dans la liste
+</p>
+
+<p>Afficher / masquer la liste: 
+  <!-- case a cocher pour afficher / masquer-->
+  <input type="checkbox" ng-model="active"/> 
+</p>
+
+
+
+<div ng-show="active">
+  <ul>
+    <li ng-repeat="film in films | limitTo :nbAffiche :debut track by $index">{{film}} <button class="btn btn-primary" ng-click="suprElement(film)">Effacer</button>  </li>  <!-- limiter les elements limiTo-->
+  </ul>
 </div>
+<!------------------------------->
 
-<ul>
-  <li ng-repeat="el in awesomeThings track by $index">{{el}}</li>
-</ul>
+<p> 
+  suivant:  <button class="btn btn-primary" ng-click="debut=debut+10">+10</button>
+  précédent: <button class="btn btn-primary" ng-click="debut=debut-10">-10</button>
+</p>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
 
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
-</div>
+
