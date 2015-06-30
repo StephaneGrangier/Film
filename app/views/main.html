@@ -27,8 +27,15 @@
 
 <div ng-show="active">
   <ul>
-    <li ng-repeat="film in films | limitTo :nbAffiche :debut track by $index">{{film}} <button class="btn btn-primary" ng-click="suprElement(film)">Effacer</button>  </li>  <!-- limiter les elements limiTo-->
-    <a ng-href="/film/{{$id}}">{{titre}}</a>
+
+    <li ng-repeat="film in MovieDB.getListeFilms() | limitTo :nbAffiche :debut track by $index">
+       <a ng-href="#/film/{{film.id}}">{{film.title}}</a>
+
+       <img ng-src="{{film.poster_path | urlPoster}}" alt="posterFct" />
+
+       <a ng-click="suprElement(film)"> <span class="glyphicon glyphicon-remove"> </a></li>
+    </li>  <!-- limiter les elements limiTo-->
+
   </ul>
 </div>
 <!------------------------------->

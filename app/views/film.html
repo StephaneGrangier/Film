@@ -1,1 +1,22 @@
-<p>This is the Film view.</p>
+<p>Détail du film :</p>
+
+<h2>{{film.original_title}}</h2>
+<p>{{id}}</p>
+
+
+<div class"descriptions" style="background-image:url(http://image.tmdb.org/t/p/w1280{{bgImage}})">
+  {{film.overview}}
+
+
+
+  <h3>Films similaires:</h3>
+  <div>
+    <ul>
+      <li ng-repeat="filmsimilaire in film.similar.results track by $index">
+       {{filmsimilaire.original_title}}
+      </li> 
+    </ul>
+  </div>
+  
+</div>
+
