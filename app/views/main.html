@@ -7,8 +7,9 @@
   <p><a class="btn btn-lg btn-success" ng-href="#/" ng-click="monClick()">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
 </div>
 
-<p>Ajouter un film
-  <input type="texte" ng-model="nouveauFilm" />
+<p>Ajouter un film</p>
+<p>Titre <input type="texte" ng-model="TitreNouveauFilm" />
+   Commentaire <input type="texte" ng-model="CommentaireNouveauFilm" />
   <a class="btn btn-lg btn-success" ng-href="#/" ng-click="monClick()">ajouter<span class="glyphicon glyphicon-ok"></span></a>
 </p>
 
@@ -27,6 +28,7 @@
 <div ng-show="active">
   <ul>
     <li ng-repeat="film in films | limitTo :nbAffiche :debut track by $index">{{film}} <button class="btn btn-primary" ng-click="suprElement(film)">Effacer</button>  </li>  <!-- limiter les elements limiTo-->
+    <a ng-href="/film/{{$id}}">{{titre}}</a>
   </ul>
 </div>
 <!------------------------------->
