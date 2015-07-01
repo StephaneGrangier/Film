@@ -28,7 +28,6 @@ angular.module('filmApp')
     $scope.listeMovieFavorite = [];
 
 	//Allimente la liste de films favorits en fonction des id de la liste "des id de film favorits"
-    
     for(var i = 0; i<listeIdFavorite.length; i++){
     	for(var j = 0; j<movies.length; j++){
 
@@ -39,9 +38,15 @@ angular.module('filmApp')
 	 }
 
 	$scope.isFavorite = function(id){
-	var retour = manageFavorite.isFavorite(id);
-	return retour;
+		var retour = manageFavorite.isFavorite(id);
+		return retour;
 	}
+
+	$scope.removeFavorite = function(id){
+		manageFavorite.removeFavorite(id);
+		location.reload();
+
+	};
      
 
   });
