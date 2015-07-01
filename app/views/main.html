@@ -37,9 +37,9 @@
 
        
 
-       <a ng-click="addFavorite(film.id)"> <span class="glyphicon glyphicon-star"> </a>
-
-       <a ng-click="removeFavorite(film.id)"> <span class="glyphicon glyphicon-star-empty"> </a>
+       <a ng-click="addFavorite(film.id)" ng-show="!isFavorite(film.id)"> <span class="glyphicon glyphicon-star"> </a>
+{{film.id}}
+       <a ng-click="removeFavorite(film.id)" ng-show="isFavorite(film.id)"> <span class="glyphicon glyphicon-star-empty"> </a>
 
 
 

@@ -13,6 +13,9 @@ angular.module('filmApp')
     $scope.MovieDB = MovieDB; //essai d'ajout de movieDB au scope'
 
 
+
+
+
     $scope.monClick = function(){
 		var titre = $scope.TitreNouveauFilm;
 		var commentaire = $scope.CommentaireNouveauFilm;
@@ -35,7 +38,29 @@ angular.module('filmApp')
 		manageFavorite.addFavorite(id);
 	};
 
+	$scope.isFavorite = function(id){
+		var retour = manageFavorite.isFavorite(id);
+		return retour;
 
+		
+	};
+
+
+
+
+
+/*
+    $scope.btAddFavorite211672 = true;
+	$scope.btRemoveFavorite211672 = true;
+
+    $scope.btAddFavorite102899 = true;
+	$scope.btRemoveFavorite102899 = true;
+
+	$scope.btAddFavorite292431 = true;
+	$scope.btRemoveFavorite292431 = true;
+*/
+
+	
 	$scope.active = true;
 	$scope.nbAffiche = 10;
   });

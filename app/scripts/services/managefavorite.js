@@ -43,15 +43,23 @@ angular.module('filmApp')
 		localStorage.setItem('listeFavorites',favoritesSerialise);	//ajout au LocalStorage
 	},
 
-	 isFavorite: function(idMovie) {
-	 	var trouve;
+	isFavorite: function(idMovie) {
+	 	if(favorites.indexOf(idMovie)!=-1){
+	 		return true;
+	 	}else{
+	 		return false;
+	 	}
+
+	 	/*var trouve;
 	 	trouve = false;
 	 	var indice;
+	 	indice = 0;
 
 	 	while (!trouve && indice < favorites.length){
 	 		trouve = favorites[indice]==idMovie;
+	 		indice = indice +1;
 	 	}
-	 	return trouve;
+	 	return trouve;*/
     }
 
     };
