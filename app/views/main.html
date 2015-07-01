@@ -33,7 +33,16 @@
 
        <img ng-src="{{film.poster_path | urlPoster}}" alt="posterFct" />
 
-       <a ng-click="suprElement(film)"> <span class="glyphicon glyphicon-remove"> </a></li>
+       <a ng-click="suprElement(film)"> <span class="glyphicon glyphicon-remove"> </a>
+
+       
+
+       <a ng-click="addFavorite(film.id)"> <span class="glyphicon glyphicon-star"> </a>
+
+       <a ng-click="removeFavorite(film.id)"> <span class="glyphicon glyphicon-star-empty"> </a>
+
+
+
     </li>  <!-- limiter les elements limiTo-->
 
   </ul>

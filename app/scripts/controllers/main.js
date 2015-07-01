@@ -8,7 +8,7 @@
  * Controller of the filmApp
  */
 angular.module('filmApp')
-  .controller('MainCtrl', function ($scope, MovieDB) {
+  .controller('MainCtrl', function ($scope, MovieDB, manageFavorite) {
 
     $scope.MovieDB = MovieDB; //essai d'ajout de movieDB au scope'
 
@@ -26,6 +26,15 @@ angular.module('filmApp')
 	$scope.suprElement = function(film){
 		MovieDB.suppressionFilm(film);
 	};
+
+	$scope.removeFavorite = function(id){
+		manageFavorite.removeFavorite(id);
+	};
+
+	$scope.addFavorite = function(id){
+		manageFavorite.addFavorite(id);
+	};
+
 
 	$scope.active = true;
 	$scope.nbAffiche = 10;
