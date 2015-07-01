@@ -16,7 +16,7 @@ angular.module('filmApp')
     $rootScope.MovieDB = MovieDB;
 
     //récupérer les données pour ce film sur internet
-    $http.get('http://amc.ig.he-arc.ch:3003/movie/'+idFilm+'?append_to_response=similar,release,credits')
+    $http.get('http://amc.ig.he-arc.ch:3003/movie/'+idFilm+'?append_to_response=similar,releases,credits')
     .success(function(data){  //cette fonction sera exécutée quand sera pret
     	$scope.film = data;
     	$rootScope.bgImage = data.backdrop_path;
