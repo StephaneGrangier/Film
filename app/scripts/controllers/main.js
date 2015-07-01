@@ -47,19 +47,6 @@ angular.module('filmApp')
 
 
 
-
-
-/*
-    $scope.btAddFavorite211672 = true;
-	$scope.btRemoveFavorite211672 = true;
-
-    $scope.btAddFavorite102899 = true;
-	$scope.btRemoveFavorite102899 = true;
-
-	$scope.btAddFavorite292431 = true;
-	$scope.btRemoveFavorite292431 = true;
-*/
-
 	
 	$scope.active = true;
 	$scope.nbAffiche = 10;
