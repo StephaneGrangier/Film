@@ -8,9 +8,11 @@
  * Controller of the filmApp
  */
 angular.module('filmApp')
-  .controller('MainCtrl', function ($scope, MovieDB, manageFavorite) {
+  .controller('MainCtrl', function ($scope, MovieDB, manageFavorite,$rootScope) {
 
     $scope.MovieDB = MovieDB; //essai d'ajout de movieDB au scope'
+
+    $rootScope.bgImage = "";
 
 
     $scope.monClick = function(){
