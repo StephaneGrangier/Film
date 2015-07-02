@@ -13,9 +13,6 @@ angular.module('filmApp')
     $scope.MovieDB = MovieDB; //essai d'ajout de movieDB au scope'
 
 
-
-
-
     $scope.monClick = function(){
 		var titre = $scope.TitreNouveauFilm;
 		var commentaire = $scope.CommentaireNouveauFilm;

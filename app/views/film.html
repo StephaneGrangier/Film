@@ -8,13 +8,14 @@
  </div> 
 
 
-<div id="bandeau" class="description">
+<div class="description">
   {{film.overview}}
 
   <h3>Films similaires:</h3>
 
   <slick infinite="false"" slides-to-show="3"" slides-to-scroll="3"
        responsive="breakpoint" init-onload="true" data="film.similar.results">
+       
     <div class="poster" ng-repeat="filmsimilaire in film.similar.results track by $index">
        {{filmsimilaire.original_title}}
       <img ng-src="{{filmsimilaire.poster_path | urlPoster}}" alt="posterFilmSimilaire" />     

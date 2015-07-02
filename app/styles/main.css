@@ -1,4 +1,12 @@
 
+.ligneFilm{
+  margin-bottom:20px;
+}
+
+li
+{
+list-style: none;
+} 
 
 .browsehappy {
   margin: 0.2em 0;
@@ -8,7 +16,9 @@
 }
 
 .description{
-  background-color:#00CCFF;
+  background-color:rgba(130, 161, 178, 0.82);
+  border-radius:10px;
+  padding:50px;
 }
 
 

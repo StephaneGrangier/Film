@@ -6,17 +6,16 @@
   <ul>
 
     <li ng-repeat="film in listeMovieFavorite track by $index">
-       <a ng-href="#/film/{{film.id}}">{{film.title}}</a>
-
-       <img ng-src="{{film.poster_path | urlPoster}}" alt="posterFct" />
-
-     
-    {{film.id}}
-    
-       <a ng-click="removeFavorite(film.id)" ng-show="isFavorite(film.id)"> <span class="glyphicon glyphicon-star-empty"> </a>
-
-
-
+     <div class="row ligneFilm">
+        <div class="col-sm-4">
+          <a ng-href="#/film/{{film.id}}">{{film.title}}</a>
+        </div>
+        <div class="col-sm-4">
+          <img ng-src="{{film.poster_path | urlPoster}}" alt="posterFct" />
+        </div>
+        <div class="col-sm-4">
+          <a ng-click="removeFavorite(film.id)" ng-show="isFavorite(film.id)"> <span class="glyphicon glyphicon-star-empty"> </a>
+        </div>
     </li>  <!-- limiter les elements limiTo-->
 
   </ul>
